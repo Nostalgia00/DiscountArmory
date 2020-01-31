@@ -1,24 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class Drag : MonoBehaviour
 {
 
     private bool mouseDown = false;
-    private Vector3 startMousePos;
-    private Vector3 startPos;
+    private Vector2 startMousePos;
+    private Vector2 startPos;
 
 
-    public void OnPointerDown(PointerEventData ped)
+    public void OnMouseDown()
     {
         mouseDown = true;
-        startPos = transform.position;
-        startMousePos = Input.mousePosition;
+        //transform.position = Input.mousePosition;
+        //startMousePos = Input.mousePosition;
     }
 
-    public void OnPointerUp(PointerEventData ped)
+    public void OnMouseUp()
     {
         mouseDown = false;
     }
@@ -28,15 +29,17 @@ public class Drag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
 
     }
-
     // Update is called once per frame
     void Update()
     {
         if (mouseDown)
         {
-            Vector3 currentPos = Input.mousePosition;
-            Vector3 diff = currentPos - startMousePos;
-            Vector3 pos = startPos + diff;
+            /*Vector2 currentPos = Input.mousePosition;
+            Vector2 diff = currentPos - startMousePos;
+            Vector2 pos = startPos + diff;
+            transform.position = pos;*/
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);//Input.mousePosition;
+            pos.z = 0;
             transform.position = pos;
         }
     }
