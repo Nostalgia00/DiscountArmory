@@ -27,16 +27,6 @@ public class cursorMove : MonoBehaviour
     void Update()
     {
 
-
-        if (hammer) // if the spriteRenderer sprite = sprite1 then change to sprite2
-        {
-            spriteRenderer.sprite = sprite2;
-        }
-        else
-        {
-            spriteRenderer.sprite = sprite1; // otherwise change it back to sprite1
-        }
-
         Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
@@ -80,7 +70,7 @@ public class cursorMove : MonoBehaviour
 
         if (hit)
         {
-            Debug.Log(hit.transform.name);
+            Debug.Log("Selected Object: " + hit.transform.name);
             if (hit.transform.gameObject.name.Equals("HammerButton"))
             {
                 HammerMode();
@@ -97,10 +87,12 @@ public class cursorMove : MonoBehaviour
     {
         hammer = true;
         tongs = false;
+        spriteRenderer.sprite = sprite1;
     }
     public void TongsMode()
     {
         hammer = false;
         tongs = true;
+        spriteRenderer.sprite = sprite2;
     }
 }
