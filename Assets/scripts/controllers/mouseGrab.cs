@@ -31,9 +31,7 @@ public class mouseGrab : MonoBehaviour
 		}
 
 		void OnMouseDown(){
-
 			isPicked = true;
-
 		}
 
 		
