@@ -18,11 +18,13 @@ public class FixableItemController : MonoBehaviour {
         initialPos = transform.position;
     }
 
-    void Update() {
-        if(Input.GetKey(KeyCode.Q)) {
-            transform.Rotate( Vector3.forward * rotationSpeed * Time.deltaTime);
-        } else if(Input.GetKey(KeyCode.E)) {
-            transform.Rotate( -Vector3.forward * rotationSpeed * Time.deltaTime);
+    void Update () {
+        if (Input.GetMouseButton(0)) {
+            if (Input.GetKey (KeyCode.Q)) {
+                transform.Rotate (Vector3.forward * rotationSpeed * Time.deltaTime);
+            } else if (Input.GetKey (KeyCode.E)) {
+                transform.Rotate (-Vector3.forward * rotationSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -39,6 +41,5 @@ public class FixableItemController : MonoBehaviour {
             transform.position = new Vector2 (mousePosition.x - deltaX, mousePosition.y - deltaY);
         }
     }
-
 
 }
