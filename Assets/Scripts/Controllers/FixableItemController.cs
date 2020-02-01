@@ -11,9 +11,19 @@ public class FixableItemController : MonoBehaviour {
 
     public static bool locked = false;
 
+    public static float rotationSpeed = 50.5f;
+
     // Init
     void Start () {
         initialPos = transform.position;
+    }
+
+    void Update() {
+        if(Input.GetKey(KeyCode.Q)) {
+            transform.Rotate( Vector3.forward * rotationSpeed * Time.deltaTime);
+        } else if(Input.GetKey(KeyCode.E)) {
+            transform.Rotate( -Vector3.forward * rotationSpeed * Time.deltaTime);
+        }
     }
 
     private void OnMouseDown () {
@@ -30,7 +40,5 @@ public class FixableItemController : MonoBehaviour {
         }
     }
 
-    private void OnMouseUp () {
 
-    }
 }
