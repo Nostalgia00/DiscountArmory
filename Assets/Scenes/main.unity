@@ -210,8 +210,8 @@ GameObject:
   m_Component:
   - component: {fileID: 821528351}
   - component: {fileID: 821528350}
-  - component: {fileID: 821528352}
   - component: {fileID: 821528353}
+  - component: {fileID: 821528352}
   m_Layer: 0
   m_Name: Longsword A Finished
   m_TagString: Untagged
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 821528349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6ef2d4802935be25b6296014912ec9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bf7259d17ed8e2b7984ac85ccaefe2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &821528353
