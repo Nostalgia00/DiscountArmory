@@ -619,7 +619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36407b8c2a3a7fcb39088aa6f795669b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  draggableItem: {fileID: 1294880064}
+  draggableItem: {fileID: 0}
+  draggableCollider: {fileID: 0}
 --- !u!1 &1186251532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,9 +1131,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cdbe15014e8437eaa2a4fe0d7b8aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &1646514314 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6843174435407873333, guid: 50442977ad57b4633acb3c86184ff0d8,
+  stick: []
+  gyro: {x: 0, y: 0, z: 0}
+  accel: {x: 0, y: 0, z: 0}
+  jc_ind: 0
+  orientation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!4 &1294880069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 496438735426948518, guid: 441b115102d8643b09c0d2403a96daf6,
     type: 3}
   m_PrefabInstance: {fileID: 6843174433765889471}
   m_PrefabAsset: {fileID: 0}

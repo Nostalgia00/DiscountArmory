@@ -6,6 +6,7 @@ using UnityEngine.UI; // Required when Using UI elements.
 public class DragonController : MonoBehaviour {
 
     public float increment, holdTime, currentHoldTime;
+    public Image flameFill;
 
     void Start () {
         currentHoldTime = holdTime;
@@ -13,9 +14,9 @@ public class DragonController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        Image flameFill = GetComponent<Image> ();
+        flameFill = GetComponent<Image> ();
         if(Input.GetKeyDown(KeyCode.Return) ) {
-            flameFill.fillAmount -= 0.15f;
+           // flameFill.fillAmount -= 0.15f;
 
         }
         if (Input.GetKeyDown (KeyCode.Space) && flameFill.fillAmount <= 1.0f) {
