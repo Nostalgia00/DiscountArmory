@@ -5,10 +5,10 @@ using UnityEngine;
 public class StaticItemController : MonoBehaviour {
 
     public GameObject draggableItem;
-    private Collider2D draggableCollider;
+    public Collider2D draggableCollider;
     float distance;
     void Start() {
-        draggableCollider = draggableItem.GetComponents<Collider2D>()[1];
+        draggableCollider = GameObject.Find("DraggableSword").GetComponent<Collider2D>();
     }
 
     void Update() {

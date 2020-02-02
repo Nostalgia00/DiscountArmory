@@ -88,11 +88,13 @@ public class cursorMove : MonoBehaviour
         hammer = true;
         tongs = false;
         spriteRenderer.sprite = sprite1;
+        FixableItemController.locked = true;
     }
     public void TongsMode()
     {
         hammer = false;
         tongs = true;
         spriteRenderer.sprite = sprite2;
+        FixableItemController.locked = false;
     }
 }
