@@ -51,32 +51,41 @@ public class PowerBarController : MonoBehaviour {
         stick = j.GetStick();
         gyro = j.GetGyro();
         accel = j.GetAccel();
-
-        if ((Input.GetKeyDown (KeyCode.Return) || accel.magnitude > 3) && locked && dragonImage.fillAmount >= 0.75f) {
-            locked = !locked;
-            dragCon.flameFill.fillAmount -= 0.01f;
-        }
-        else if(dragonImage.fillAmount <=0f && !locked) {
-            t=0;
-            powerBar.value=0;
-            locked = !locked;
-        }
-        else if ((Input.GetKeyDown (KeyCode.Return) || accel.magnitude > 3) && dragonImage.fillAmount > 0f) {
-            dragCon.flameFill.fillAmount -= 0.01f;
-
-            j.SetRumble(50, 50, 5.0f, 1000);
-            if (powerBar.value >=sweetSpotMin && powerBar.value <= sweetSpotMax) {
-                Debug.Log("BING - GOOD");
-                GameController.overallGameScore+=1;
-                Debug.Log("Score: " + GameController.overallGameScore);
-            } else {
-                Debug.Log("BONG - BAD");
+        if (FixableItemController.locked)
+        {
+            if ((Input.GetKeyDown(KeyCode.Return) || accel.magnitude > 3) && locked && dragonImage.fillAmount >= 0.75f)
+            {
+                locked = !locked;
+                dragCon.flameFill.fillAmount -= 0.01f;
             }
-        }
-        
-        if (!locked) {
-            t += Time.deltaTime;
-            powerBar.value = Mathf.Abs(Mathf.Sin (t));
+            else if (dragonImage.fillAmount <= 0f && !locked)
+            {
+                t = 0;
+                powerBar.value = 0;
+                locked = !locked;
+            }
+            else if ((Input.GetKeyDown(KeyCode.Return) || accel.magnitude > 3) && dragonImage.fillAmount > 0f)
+            {
+                dragCon.flameFill.fillAmount -= 0.01f;
+
+                j.SetRumble(50, 50, 5.0f, 1000);
+                if (powerBar.value >= sweetSpotMin && powerBar.value <= sweetSpotMax)
+                {
+                    Debug.Log("BING - GOOD");
+                    GameController.overallGameScore += 1;
+                    Debug.Log("Score: " + GameController.overallGameScore);
+                }
+                else
+                {
+                    Debug.Log("BONG - BAD");
+                }
+            }
+
+            if (!locked)
+            {
+                t += Time.deltaTime;
+                powerBar.value = Mathf.Abs(Mathf.Sin(t));
+            }
         }
 
     }
