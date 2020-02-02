@@ -32,6 +32,8 @@ public class PowerBarController : MonoBehaviour {
         else if (Input.GetKeyDown (KeyCode.Return) && dragonImage.fillAmount > 0f) {
             if(powerBar.value >=sweetSpotMin && powerBar.value <= sweetSpotMax) {
                 Debug.Log("BING - GOOD");
+                GameController.overallGameScore+=1;
+                Debug.Log("Score: " + GameController.overallGameScore);
             } else {
                 Debug.Log("BONG - BAD");
             }
