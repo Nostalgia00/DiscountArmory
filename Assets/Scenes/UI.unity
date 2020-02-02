@@ -758,8 +758,12 @@ GameObject:
   - component: {fileID: 1932300197}
   - component: {fileID: 1932300196}
   - component: {fileID: 1932300195}
+  - component: {fileID: 1932300202}
+  - component: {fileID: 1932300201}
+  - component: {fileID: 1932300200}
+  - component: {fileID: 1932300199}
   m_Layer: 5
-  m_Name: Show Dialogue
+  m_Name: ShowDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,8 +786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 250}
+  m_SizeDelta: {x: 640, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1932300195
 MonoBehaviour:
@@ -798,11 +802,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Anto
+    name: Bernhard
     sentences:
-    - Don't mess with my scene!
-    - DON'T MESS WITH MY SCENE!
-    image: {fileID: 0}
+    - What do they want from me?
+    - Why can't they leave me alone?
+    - I mean, what do they want from me?
+    - Guess I better click on this anvil.
+    image: {fileID: 21300000, guid: c22f4cdd7c0f9ec74b33ece8981fc3da, type: 3}
 --- !u!114 &1932300196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6509434, g: 0.5004895, b: 0.5004895, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -893,6 +899,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932300193}
   m_CullTransparentMesh: 0
+--- !u!114 &1932300199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932300193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a696649bfc3f3594990dc25c33cf282f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Bernhard
+    sentences:
+    - Yeah, I know...
+    image: {fileID: 0}
+--- !u!114 &1932300200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932300193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a696649bfc3f3594990dc25c33cf282f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Manfred
+    sentences:
+    - Well, because you fix swords.
+    image: {fileID: 0}
+--- !u!114 &1932300201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932300193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a696649bfc3f3594990dc25c33cf282f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Berhard
+    sentences:
+    - Yeah, but why me?
+    - Why do they come to me?
+    image: {fileID: 21300000, guid: c22f4cdd7c0f9ec74b33ece8981fc3da, type: 3}
+--- !u!114 &1932300202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932300193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a696649bfc3f3594990dc25c33cf282f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Manfred
+    sentences:
+    - They want their sword fixed.
+    image: {fileID: 21300000, guid: f486edf1f313a770f98ae86b7a5f8cd9, type: 3}
 --- !u!1 &2029056485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f486edf1f313a770f98ae86b7a5f8cd9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c22f4cdd7c0f9ec74b33ece8981fc3da, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1149,7 +1224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5034522c55cb016fc9ef3c98081d189d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1161,7 +1236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Start Game
 --- !u!222 &2140379253
 CanvasRenderer:
   m_ObjectHideFlags: 0
